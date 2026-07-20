@@ -18,7 +18,7 @@ jobs:
           pip install requests
           pip install bs4
       - name: Run track.py
-        run: python track.py ${{ secrets.PASSWORD }}
+        run: python track.py ${{ secrets.IP }} ${{ secrets.PASSWORD }}
       - name: Commit and push changes
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
