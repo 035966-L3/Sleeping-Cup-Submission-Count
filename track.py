@@ -61,7 +61,7 @@ def extract_numbers(text):
         return int(match.group(1)), int(match.group(2))
     else:
         return None, None
-login_url = 'https://scg3.piaoztsdy.cn/login?uname=035966_L3&password={}&tfa=&authnChallenge='.format(sys.argv[1])
+login_url = 'http://{}/login?uname=035966_L3&password={}&tfa=&authnChallenge='.format(sys.argv[1], sys.argv[2])
 session = requests.Session()
 response = session.post(login_url)
 if response.ok == False:
