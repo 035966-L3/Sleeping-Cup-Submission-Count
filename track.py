@@ -67,7 +67,7 @@ response = session.post(login_url)
 if response.ok == False:
     print('Login failed!')
     sys.exit(1)
-url = 'https://scg3.piaoztsdy.cn/p?page='
+url = 'http://{}/p?page='.format(sys.argv[1])
 page = 0
 count = 0
 submits = 0
